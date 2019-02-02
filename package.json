@@ -1,0 +1,27 @@
+{
+  "name": "testing-webpack",
+  "version": "1.0.0",
+  "description": "I am testing how to create bundle file using webpack",
+  "main": "index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sankita15/es6-tutorial.git"
+  },
+  "author": "Ankita Srivastava",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sankita15/es6-tutorial/issues"
+  },
+  "homepage": "https://github.com/sankita15/es6-tutorial#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "webpack": "^3.1.0",
+    "webpack-cli": "^2.1.5"
+  },
+  "dependencies": {}
+}
