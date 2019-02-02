@@ -1,0 +1,21 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script type="text/babel">
+        function writeEmail(firstName, purchasePrice) {
+            var shipping = 5.95;
+            console.log(`Hi ${firstName}, Thanks for buying from us!!!
+            Price: $${purchasePrice}
+            Shipping: $${shipping}
+            Grand Total: $${purchasePrice + shipping};
+            `
+            );
+        }
+
+        writeEmail('Ankita','100');
+    </script>
+    <title>Template String</title>
+</head>
+<body>
+</body>
+</html>
