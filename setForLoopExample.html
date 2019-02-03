@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script type="text/babel">
+        const courses = new Set();
+        courses.add('Maths')
+            .add('Hindi')
+            .add('English')
+            .add('Computer');
+
+        console.log(courses.size);
+        console.log("Is Hindi available in the courses? ", courses.has('Hindi'));
+        console.log("Deleting Hindi from courses...........");
+        courses.delete('Hindi');
+        console.log("Is Hindi still available in the courses? ", courses.has('Hindi'));
+
+
+        const books = new Map();
+        books.set('Autobiography','Yogi');
+        books.set('tea tea','premchand');
+        books.set('lipton','green');
+        books.set('wafers','strawberry');
+
+        for( let book of books.entries()){
+            console.log(book)
+        }
+
+        for( let book of books.keys()){
+            console.log(book)
+        }
+
+        for( let book of books.values()){
+            console.log(book)
+        }
+
+    </script>
+    <title>Set & For..of Example</title>
+</head>
+<body>
+</body>
+</html>
