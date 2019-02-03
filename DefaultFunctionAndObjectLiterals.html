@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script type="text/babel">
+        var cat = {
+            //use of default parameters in function
+            meow(times=4){
+                console.log("meow".repeat(times))
+            },
+            purr(times){
+                console.log("purr".repeat(times))
+            },
+            snore(times){
+                console.log("snore".repeat(times))
+            }
+        };
+
+        //using object literals
+        cat.meow();
+        cat.purr(5);
+        cat.snore(7);
+
+    </script>
+    <title>Default Parameters & Object Literals</title>
+</head>
+<body>
+</body>
+</html>
