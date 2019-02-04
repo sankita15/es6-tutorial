@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script type="text/babel">
+
+        //We are having id field inside courseInfo object also but it will not clash with the let id as it is of Symbol
+        //type and that one inside object is of string type
+        let id = Symbol();
+
+        let courseInfo = {
+            title: 'ES6',
+            topics: ['babel','syntax','function','classes'],
+            id: "js-course"
+        };
+
+        courseInfo[id]=41284;
+
+        console.log(courseInfo);
+
+        let waitingList = ['Sarah','Megan','Harshita','Gaurav','Shreya','Payal'];
+
+        let guestList = tableReady(waitingList);
+
+        function tableReady(arr){
+            let nextIndex = 0;
+            return{
+                next() {
+                    if(nextIndex < arr.length){
+                        return { value:arr.shift(), done: false }
+                    }else{
+                        return { done: true }
+                    }
+                }
+            }
+        }
+
+        console.log(`${guestList.next().value} table is ready for dinner`);
+        console.log(`${guestList.next().value} table is ready for dinner`);
+        console.log(`${guestList.next().value} table is ready for dinner`);
+        console.log(`${guestList.next().value} table is ready for dinner`);
+        console.log(`${guestList.next().value} table is ready for dinner`);
+        console.log(`${guestList.next().value} table is ready for dinner`);
+        console.log(`Guest Finished? ${guestList.next().done}`);
+
+    </script>
+    <title>Map Example</title>
+</head>
+<body>
+</body>
+</html>
