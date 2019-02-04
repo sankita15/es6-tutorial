@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.29/browser.js"></script>
+    <script type="text/babel">
+
+        const getSpaceInPeople = () =>
+            fetch('http://api.open-notify.org/astros.json')
+                .then(res => res.json());
+
+        //getSpaceInPeople will return json by using that json we are iterating over people and printing names
+        const spaceNames = () => {
+           return getSpaceInPeople()
+               .then(json => json.people)
+               .then(people => people.map(p => p.name))
+               .then(names => names.join(', '))
+        };
+
+        spaceNames()
+            .then(console.log)
+
+    </script>
+    <title>Promises With Fetch Example</title>
+</head>
+<body>
+</body>
+</html>
